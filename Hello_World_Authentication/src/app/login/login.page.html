@@ -1,0 +1,37 @@
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Login</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="tertiary" fullscreen>
+      <ion-card color="primary">
+        <div>
+          <ion-item>
+            <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="auth.log_email" class="input" padding-horizontal
+              clear-input="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="auth.log_password" class="input"
+              padding-horizontal clear-input="true"></ion-input>
+          </ion-item>
+        </div>
+      </ion-card>
+      <ion-card>
+        <ion-button color="light" expand="block" (click)="auth.login()">
+          <strong>Login</strong>
+        </ion-button>
+      </ion-card>
+      <div style="text-align: center;padding-top: 2em;">
+        <ion-text color="light">
+          Not an existing user?
+        </ion-text>
+        <strong style="color: white;" routerLink="/registration" >
+          <a>Sign Up!</a> 
+        </strong>
+      </div>
+    </ion-content>
+
+  </ion-app>
+</body>

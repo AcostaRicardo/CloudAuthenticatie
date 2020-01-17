@@ -1,0 +1,29 @@
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Signup</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="tertiary" fullscreen>
+      <ion-card color="primary">
+        <div>
+          <ion-item>
+            <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="auth.sign_email" class="input" padding-horizontal
+              clear-input="true"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="auth.sign_password" class="input"
+              padding-horizontal clear-input="true"></ion-input>
+          </ion-item>
+        </div>
+      </ion-card>
+      <ion-card>
+        <ion-button color="light" expand="block" (click)="auth.signup()">
+          <strong>Register</strong>
+        </ion-button>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+</body>
